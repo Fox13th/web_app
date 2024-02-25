@@ -13,12 +13,12 @@ aside {
 }
 
 aside img {
-    width:60px;
+    width: 60px;
     float: left;
 }
 
 aside li img {
-    width:18px;
+    width: 18px;
     float: left;
     position: relative;
     top: 5px;
@@ -26,8 +26,8 @@ aside li img {
 
 aside .logo {
     font-size: 40px;
-    margin left: 10px;
-    font-weight: 40px;
+    margin-left: 10px;
+    font-weight: lighter;
     position: relative;
     top: -5px;
 }
@@ -59,5 +59,5 @@ main .features {
     width: 75%;
 }
 
-main .features h1 {font-size: 50 px;}
-main .features p {max=width: 400[x; margin: 20 px auto}
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto;}
