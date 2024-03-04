@@ -8,7 +8,7 @@ class Records(models.Model):
     date = models.DateTimeField('Дата публикации')
 
     def __str__(self):
-        return self.title
+        return f'Запись: {self.title}'
 
     class Meta:
         verbose_name = 'Запись'

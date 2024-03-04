@@ -5,7 +5,17 @@
 {% block content %}
     <div class="features">
         <h1>Просмотр записей</h1>
-        <p>Django is available open-source under the BSD license. We recommend using the latest version of Python 3. The last version to support Python 2.7 is Django 1.11 LTS. See the FAQ for the Python versions supported by each version of Django. Here’s how to get it:</p>
-        <button class="btn btn-danger">Просто нажми</button>
+        {% if rec %}
+            {% for el in rec %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>У вас нет записей!</p>
+        {% endif %}
+
+        {# Комментарий #}
     </div>
 {% endblock %}
