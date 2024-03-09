@@ -10,6 +10,9 @@ class Records(models.Model):
     def __str__(self):
         return f'Запись: {self.title}'
 
+    def get_absolute_url(self):
+        return f'/records/{self.id}'
+
     class Meta:
         verbose_name = 'Запись'
         verbose_name_plural = 'Записи'

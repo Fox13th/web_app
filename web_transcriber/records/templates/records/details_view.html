@@ -7,5 +7,7 @@
         <h1>{{ record.title }}</h1>
         <p>{{ record.date }}</p>
         <p>{{ record.full_text }}</p>
+        <a href="{% url 'record-delete' record.id %}" class="btn btn-danger">Удалить</a>
+        <a href="{% url 'record-update' record.id %}" class="btn btn-info">Редактировать</a>
     </div>
 {% endblock %}

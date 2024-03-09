@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Records
 from .forms import RecordsForm
-from django.views.generic import DetailView
+from django.views.generic import DetailView, UpdateView, DeleteView
 
 
 def records_home(request):
@@ -13,6 +13,19 @@ class RecordsDetailView(DetailView):
     model = Records
     template_name = 'records/details_view.html'
     context_object_name = 'record'
+
+
+class RecordsUpdateView(UpdateView):
+    model = Records
+    template_name = 'records/create.html'
+
+    form_class = RecordsForm
+
+
+class RecordsDeleteView(DeleteView):
+    model = Records
+    success_url = '/records'
+    template_name = 'records/records-delete.html'
 
 
 def create(request):
